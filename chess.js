@@ -34,8 +34,7 @@
  */
 
 var Chess = function(fen) {
-	
-	alert('chessjs');
+
     /* jshint indent: false */
 
     var BLACK = 'b';
@@ -244,7 +243,7 @@ var Chess = function(fen) {
      * ... we should rewrite this, and ditch the silly error_number field while
      * we're at it
      */
-    function validate_fen(fen) {		
+    function validate_fen(fen) {
         var errors = {
             0: 'No errors.',
             1: 'FEN string must contain six space-delimited fields.',
@@ -458,7 +457,6 @@ var Chess = function(fen) {
     }
 
     function build_move(board, from, to, flags, promotion) {
-		
         var move = {
             color: turn,
             from: from,
@@ -547,7 +545,7 @@ var Chess = function(fen) {
 
                     if (board[square] != null &&
                         board[square].color === them) {
-                        add_move(board, moves, i, square,   o             jiow ddxxca);
+                        add_move(board, moves, i, square, BITS.CAPTURE);
                     } else if (square === ep_square) {
                         add_move(board, moves, i, ep_square, BITS.EP_CAPTURE);
                     }
@@ -734,7 +732,7 @@ var Chess = function(fen) {
         return attacked(swap_color(color), kings[color]);
     }
 
-    function in_check() {		
+    function in_check() {
         return king_attacked(turn);
     }
 
@@ -835,7 +833,7 @@ var Chess = function(fen) {
         });
     }
 
-    function make_move(move) {		
+    function make_move(move) {
         var us = turn;
         var them = swap_color(us);
         push(move);
@@ -944,7 +942,6 @@ var Chess = function(fen) {
         board[move.from] = board[move.to];
         board[move.from].type = move.piece;  // to undo any promotions
         board[move.to] = null;
-		
 
         if (move.flags & BITS.CAPTURE) {
             board[move.to] = {type: move.captured, color: them};
@@ -1256,7 +1253,6 @@ var Chess = function(fen) {
         },
 
         in_check: function() {
-			
             return in_check();
         },
 
