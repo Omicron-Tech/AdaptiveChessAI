@@ -1,0 +1,55 @@
+.board {
+    width: 400px;
+    margin-left: 150px;
+	float:left;
+}
+
+.info {
+    width: 400px;
+    margin: auto;
+	float:left;
+}
+.info2 {
+    width: 200px;
+    margin-left: 100px;
+	float:left;
+}
+
+.move-detail {
+    width: 200px;
+    margin-left: 100px;
+	float:left;
+	border-style: solid;
+	border-color: #D1AF53;	
+	background-color:#F5B17C;
+}
+
+
+.move-history {
+    max-height: 200px;
+    overflow-y: scroll;
+	border-style: solid;
+	border-color: #D1AF53;
+	height:100px;
+	background-color:#F4E3B4;
+	margin-left: 50px;
+	
+}
+
+.back-grounddiv {
+    margin: auto;
+	height:650px;
+	border-style: solid;
+	border-color: green;
+	background-color:#498347;	
+	background-image:url('chess-433071_640_2.jpg');	
+	
+}
+
+div.image {
+   background-image:url('chess-433071_640.jpg');	
+   width:400px;height:264px;
+   float:right;
+   margin-top: 40px;
+   margin-right: 60px;
+}​
